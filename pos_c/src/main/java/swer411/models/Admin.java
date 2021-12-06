@@ -1,5 +1,15 @@
 package swer411.models;
 
-public class Admin {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "admin")
+public class Admin {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 }
